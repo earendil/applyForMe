@@ -8,7 +8,6 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 from reedclient.api import ReedJobs
 from reedclient.utils import read_file
 
-
 class ApplyForMe(object):
 
     def __init__(self, keywords, filter_out, maxSalary):
@@ -79,7 +78,7 @@ if __name__ == "__main__":
     test = ApplyForMe(words, dis_title, maxSalary=1)
 
     test.signIn("your@email.com", read_file("pass"))
-    time.sleep(5)
-    test.apply()
+    time.sleep(15)
+    # test.apply()
     test.quit()
 
